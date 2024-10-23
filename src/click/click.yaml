@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: click-py
@@ -12,3 +12,9 @@ spec:
     metadata:
       labels:
         app: click-py
+    spec:
+      containers:
+        - name: click-py
+          image: python:latest
+          ports:
+            - containerPort: 80
