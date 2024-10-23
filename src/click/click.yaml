@@ -1,6 +1,19 @@
 apiVersion: v1
-kind: Service
+kind: Deployment
 metadata:
   name: click-py
 spec:
   replicas: 3
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: click-py
+  template:
+    metadata:
+      labels:
+        app: click-py
+    spec:
+      containers:
+      - image: python
+        name: click-py
+  
