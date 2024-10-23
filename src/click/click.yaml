@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: click-py
-          image: python/clickpythonapp:0.1
+          image: python
           ports:
             - containerPort: 80
