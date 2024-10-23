@@ -12,8 +12,3 @@ spec:
     metadata:
       labels:
         app: click-py
-    spec:
-      containers:
-      - image: python
-        name: click-py
-  
